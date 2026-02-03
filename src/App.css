@@ -1,38 +1,300 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark {
+  background:#17213a;
+  color:white;
+  min-height:100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.light {
+  background:#f1f5f9;
+  color:black;
+  min-height:100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* NAVBAR */
+.navbar{
+  background:#020617;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a{
+  color:white;
+  margin-right:20px;
+  text-decoration:none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a.active{
+  color:#38bdf8;
+}
+
+/* PAGE */
+.page{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* CARD */
+.card{
+  background:#020617;
+  padding:30px;
+  width:550px;          /* Increased width */
+  max-width:90%;        /* Responsive */
+  border-radius:12px;
+  box-shadow:0 0 20px black;
+  transition: transform 0.3s ease, width 0.3s ease;
+  margin: 80px;
+}
+.card:hover{
+  transform: scale(1.02);
+}
+
+.light .card{
+  background:white;
+  color:black;
+}
+
+/* INPUTS */
+input,textarea,select{
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+}
+
+/* BUTTON */
+button{
+  background:#38bdf8;
+  border:none;
+  padding:10px;
+  width:20%;
+  cursor:pointer;
+}
+
+/* TICKET */
+.dark .ticket{
+  background:#0f172a;
+  padding:8px;
+  margin:8px 0;
+}
+.light .ticket{
+  background:#c7d1e8;
+  padding:8px;
+  margin:8px 0;
+}
+/* HOME PAGE */
+
+.home-card{
+  text-align:center;
+}
+
+.home-title{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.home-subtitle{
+  font-size:16px;
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+.home-features{
+  text-align:left;
+  margin:20px 0;
+}
+
+.home-features p{
+  margin:8px 0;
+}
+
+.home-btn{
+  margin-top:15px;
+  background:#22c55e;
+}
+
+.home-btn:hover{
+  background:#16a34a;
+}
+/* CATEGORY COLORS */
+
+.ticket.academic{
+  border-left:6px solid #3b82f6;
+}
+
+.ticket.technical{
+  border-left:6px solid #22c55e;
+}
+
+.ticket.general{
+  border-left:6px solid #facc15;
+}
+
+/* ADMIN LAYOUT */
+
+.admin-wrapper{
+  width:90%;
+  max-width:1100px;
+}
+
+/* GRID */
+
+.ticket-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+/* BASE CARD */
+
+.ticket-card{
+  padding:20px;
+  border-radius:12px;
+  color:white;
+  box-shadow:0 0 15px black;
+  transition:0.3s;
+}
+
+.ticket-card:hover{
+  transform:scale(1.03);
+}
+
+/* CATEGORY COLORS */
+
+.ticket-card.academic{
+  background:#1e3a8a;
+}
+
+.ticket-card.technical{
+  background:#14532d;
+}
+
+.ticket-card.general{
+  background:#713f12;
+}
+
+/* STATUS */
+
+.status-open{
+  color:orange;
+  font-weight:bold;
+}
+
+.status-read{
+  color:lightgreen;
+  font-weight:bold;
+}
+
+/* CLEAR BUTTON */
+
+.clear-btn{
+  margin-top:25px;
+  background:#ef4444;
+  color:white;
+}
+
+/* ADMIN BOARD */
+
+.admin-board{
+  width:95%;
+  max-width:1200px;
+}
+
+.columns{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:20px;
+  margin-top:20px;
+}
+
+/* COLUMN CARDS */
+
+.column{
+  padding:15px;
+  border-radius:12px;
+  min-height:400px;
+  color:white;
+}
+
+.column h3{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+/* New Modern Colors */
+
+.academic{
+  background: linear-gradient(135deg,#2563eb,#1e40af);
+}
+
+.technical{
+  background: linear-gradient(135deg,#16a34a,#065f46);
+}
+
+.general{
+  background: linear-gradient(135deg,#f59e0b,#b45309);
+}
+
+/* TICKET ITEM */
+
+.ticket-item{
+  background:rgba(0,0,0,0.4);
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+
+.small-btn{
+  margin-top:5px;
+  padding:5px;
+  background:#38bdf8;
+  border:none;
+  width:100%;
+}
+
+.status-open{
+  color:orange;
+  font-weight:bold;
+  margin-left:5px;
+}
+
+.status-read{
+  color:lightgreen;
+  font-weight:bold;
+  margin-left:5px;
+}
+
+.empty-text{
+  text-align:center;
+  opacity:0.7;
+}
+
+/* CLEAR BUTTON */
+
+.clear-btn{
+  margin-top:20px;
+  background:#ef4444;
+  color:white;
+}
+.column{
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+/* ABOUT PAGE WIDE CARD */
+
+.about-card{
+  width: 700px;      /* wider */
+  max-width: 95%;   /* responsive */
+  background:#020617;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 0 20px black;
+  transition: transform 0.3s ease, width 0.3s ease;
+  margin: 80px;
 }
