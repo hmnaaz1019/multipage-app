@@ -40,7 +40,9 @@ function Login() {
           Login
         </button>
 
-
+        <p style={{ marginTop: "10px", fontSize: "14px" }}>
+          Username: admin | Password: 1234
+        </p>
 
       </div>
     </div>
